@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 <script defer src="main.js"></script></head>
 <body>
     <div id="locationDiv">
+        <div id="locationPickerDiv">
         <input type="text" id="locationValue" placeholder="Enter the Location">
+        <div id="suggestions"></div>
+        </div>
         <button id="WeatherDetails">Submit</button>
     </div>
     <div id="todaysWeather">
@@ -17,12 +21,26 @@
         </div>
         <section class="todaysWeatherComponentsDivider"></section>
         <div id="tempDetails" class="todaysWeatherComponents">
-            <div id="temperatureDiv">
+            <div id="temperatureDiv" class="headerPCombo">
                 <header>Temperature: </header>
                 <p></p>
             </div>
-            <div id="temperatureFeelDiv">
-                <header>Feels like</header>
+            <div id="temperatureDivMaxMin" class="headerPCombo">
+                <header>Max: </header>
+                <p></p>
+                <span></span>
+                <span></span>
+                <header>Min: </header>
+                <p></p>
+            </div>
+            <div id="temperatureFeelDiv" class="headerPCombo">
+                <header>Feels like: </header>
+                <p></p>
+            </div>
+            <div id="temperatureFeelDivMaxMin" class="headerPCombo">
+                <header>Max: </header>
+                <p></p>
+                <header>Min: </header>
                 <p></p>
             </div>
         </div>
@@ -34,16 +52,29 @@
         <section class="todaysWeatherComponentsDivider"></section>
         <div id="sunDetails" class="todaysWeatherComponents">
             <img src="28147380e2349c9bd77b.svg" alt="Sun">
-            <div id="sunRiseDiv"><p>Sun rise:</p></div>
-            <div id="sunSetDiv">
-                <p >Sun Set:</p>
+            <div id="sunRiseDiv" class="headerPCombo">
+                <header>Sun rise:</header>
+                <p></p>
+            </div>
+            <div id="sunSetDiv" class="headerPCombo">
+                <header>Sun Set:</header>
+                <p></p>
             </div>
         </div>
         <section class="todaysWeatherComponentsDivider"></section>
         <div id="otherDetails" class="todaysWeatherComponents">
-            <p>Precipitation:</p>
-            <p>Humidity:</p>
-            <p>Wind:</p>
+            <div class="headerPCombo">
+            <header>Precipitation:</header>
+            <p></p>
+        </div>
+            <div class="headerPCombo">
+            <header>Humidity:</header>
+            <p></p>
+        </div>
+            <div class="headerPCombo">
+            <header>Wind:</header>
+            <p></p>
+        </div>
         </div>
 
     </div>
